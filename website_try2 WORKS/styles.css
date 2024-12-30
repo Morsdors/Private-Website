@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+.highlight-contact {
+    color: #a1a1a1; /* Initial color (gray) */
+    transition: color 0.5s ease;
+}
+
+.highlight-contact.active {
+    animation: blink 2.5s ease; /* Apply the animation */
+}
+
+@keyframes blink {
+    0%, 100% {
+        color: white; /* Color during blinking */
+    }
+    50% {
+        color: yellow; /* Lighten to yellow */
+    }
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* CSS for header */
+.header {
+    position: fixed;  /* Fix the header to the top of the page */
+    top: 0;           /* Align it to the top */
+    left: 0;          /* Align it to the left */
+    width: 100%;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    z-index: 1000; /* High z-index to ensure it stays above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow for depth */
+}
+
+.header .logo {
+    font-size: 30px;
+    font-family: 'Sriracha', cursive;
+    color: #000;
+    text-decoration: none;
+    margin-left: 30px;
+    margin-top: -8px;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.made-by {
+    font-family: "Charmonman", cursive;
+    font-weight: 50;
+    font-style: cursive;
+    font-size: 14px;
+    color: gray;
+    line-height: 1; /* Adjust line height to make it close to the logo */
+    margin-bottom: -6px; /* Small margin to create a little space */
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f5f5f5;
+    margin-right: 20px;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: #000;
+    padding: 35px 20px;
+}
+
+/* CSS for main element */
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 520px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.intro h1 {
+    font-family: sans-serif;
+    font-size: 60px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.intro p {
+    font-size: 20px;
+    color: #d1d1d1;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.intro button {
+    background-color: #5edaf0;
+    color: #000;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+}
+
+.achievements {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 80px;
+}
+
+.achievements .work {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.achievements .work i {
+    width: fit-content;
+    font-size: 50px;
+    color: #333333;
+    border-radius: 50%;
+    border: 2px solid #333333;
+    padding: 12px;
+}
+
+.achievements .work .work-heading {
+    font-size: 20px;
+    color: #333333;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.achievements .work .work-text {
+    font-size: 15px;
+    color: #585858;
+    margin: 10px 0;
+}
+
+
+.about-me {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80");
+    background-size: 300%;
+    background-position: right;
+    background-repeat: no-repeat;
+    padding: 40px 80px;
+    border-top: 2px solid #eeeeee;
+}
+
+    
+
+
+.about-me-text h2 {
+    font-size: 45px;
+    color: #333333;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 25px;
+    color: white;/*#333333;*/
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+.about-me-text p {
+    font-size: 20px;
+    color: #585858;
+    margin: 10px 0;
+}
+
+.about-me-text a {
+  color: white; /* Inherit white color like <p> */
+  text-decoration: underline; /* Keep it as a link */
+  transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+.about-me-text a:hover {
+  color: #ffcc00; /* Change color on hover */
+}
+
+.catch p, 
+.catch h2 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+.grid-item {
+    perspective: 1000px; /* Creates the 3D space for children elements */
+    height: 250px; /* Set a fixed height to maintain shape */
+}
+
+.grid-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform-origin: center;
+}
+
+.grid-item:hover .grid-content {
+    transform: rotateY(180deg);
+    transform-origin: center;
+}
+
+.front, .back {
+    margin: 0; /* Ensure no margin is added */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    padding: 20px;
+}
+
+.front {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.back {
+    background-color: rgb(114, 116, 122, 0.7);/*gray; /* Example background color */
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.back a {
+    color: white; /* Initial color */
+    text-decoration: underline; /* Underline the link */
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.back a:hover, 
+.back a:focus {
+    color: #ffcc00; /* Change color on hover/click/focus */
+    text-decoration: underline; /* Ensure underline is visible on hover */
+}
+
+.back a:active {
+    color: #ff9900; /* Slightly different color on click (active state) */
+}
+
+
+
+
+.work-heading {
+    font-size: 20px;
+    color: dark-gray;/*#007BFF;*/
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.grid-item .work-heading{
+    color: black; /* dark-gray;/*#007BFF;*/
+}
+
+.grid-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.grid-item ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.grid-item ul li:before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+    color: #007BFF;
+}
+
+/* CSS for footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #302f49;
+    padding: 40px 80px;
+}
+
+.footer .copy {
+    color: #fff;
+}
+
+.bottom-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.bottom-links .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.bottom-links .links span {
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.bottom-links .links a {
+    text-decoration: none;
+    color: #a1a1a1;
+    padding: 10px 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.review-image {
+  width: 65%; /* Adjust size as needed */
+  height: auto;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2); /* Slight shadow */
+  border-radius: 5px;
+  transition: transform 0.3s ease; /* Adds a hover effect */
+  margin-top: 20px; /* Adjust the value as needed */
+}
+
+
+
+.review-image:hover {
+  transform: scale(1.05); /* Slightly enlarges the image on hover */
+}
+
+
+.dora-image {
+  width: 400px; /* Adjust size as needed */
+  height: auto;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.7); /* Slight shadow */
+  border-radius: 5px;
+  transition: transform 0.3s ease; /* Adds a hover effect */
+  position: relative;
+  top: -120px; /* Moves the image upwards to overlap the background */
+  z-index: 1; /* Ensures it stays on top of the background */
+  margin-bottom: -30px; /* Adjusts the layout so there isn't too much space after the image */
+
+}
+
+
+
+
+
+
+/*na mobilne */
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: #000;
+    transition: 0.3s;
+}
+
+
+
+/* Stylowanie dla urządzeń mobilnych o szerokości ekranu 768px i mniej */
+@media (max-width: 768px) {
+/* Hide the menu on small screens and style the hamburger icon */
+
+    body{
+        width: 100%;    
+    }
+
+    .header{
+        width: 100%;
+    }
+    
+    /* Show hamburger menu */
+    .menu-toggle {
+        display: block;
+ 
+    }
+
+        /* Change bars to form an "X" when active */
+    .menu-toggle.active .bar1 {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    .menu-toggle.active .bar2 {
+        opacity: 0; /* Hide the middle bar */
+    }
+
+    .menu-toggle.active .bar3 {
+        transform: rotate(-45deg) translate(5px, -6px);
+    }
+
+
+    
+     /* Hide nav items by default */
+     .nav-items {
+        display: none;
+        position: absolute;
+        top: 100px; /* Adjust depending on header height */
+        background-color: #f5f5f5;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Show nav items when active */
+    .nav-items.active {
+        display: flex;
+    }
+
+    .nav-items a {
+        padding: 10px 20px;
+        width: 100%;
+        color: #000;
+    }
+
+
+    /* Nagłówek */
+    .header {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .logo {
+        font-size: 24px;
+    }
+
+    /* Intro */
+    .intro {
+        height: 300px;
+        padding: 20px;
+    }
+    .intro h1 {
+        padding-right: 40px;
+        padding-top: 80px;
+        font-size: 40px;
+    }
+    .intro p {
+        font-size: 16px;
+        padding-right: 40px;
+    }
+
+    /* Osiągnięcia */
+    .achievements {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .achievements .work {
+        padding: 10px;
+    }
+    .achievements .work i {
+        font-size: 40px;
+    }
+    .achievements .work .work-heading {
+        font-size: 18px;
+    }
+
+    /* .about-me.about-me-text.catch h2 {
+        font-size: 20;
+    } */
+
+    .about-me-text h2 {
+        font-size: 40px; /* Adjust to your desired font size */
+        line-height: 1.4; /* Optional: Adjust line spacing for readability */
+    }
+
+    /* .about-me {
+        background: lightblue;
+        padding: 40px 80px;
+        border-top: 2px solid #eeeeee;
+    } */
+
+    .about-me {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80");
+        background-size: 300%;
+        background-repeat: repeat;
+        
+        
+        border-top: 2px solid #eeeeee;
+    }
+
+    /* Przewodniki w siatce */
+    .grid-container {
+
+        grid-template-columns: 1fr;
+        gap: 160px;
+        margin-bottom: 170px;
+    }
+    .grid-item {
+        height: auto;
+        padding-right: 130px;
+    }
+
+    .grid-content {
+        padding: 58px; /* Add padding to grid content */
+    }
+
+    .catch.about-me-text img {
+        margin-left: 15px;
+    }
+
+    /* Stopka */
+    .footer {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .bottom-links {
+        flex-direction: column;
+    }
+    .bottom-links .links span,
+    .bottom-links .links a {
+        font-size: 14px;
+        padding: 5px 0;
+    }
+}
